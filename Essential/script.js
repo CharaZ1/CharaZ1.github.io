@@ -1,5 +1,5 @@
 const images = [
-    { src: "images/A1.jpg", message: "You are my heart's delight, Happy Valentine's Day!" },
+    { src: "A1.jpg", message: "You are my heart's delight, Happy Valentine's Day!" },
     { src: "images/A2.jpg", message: "Roses are red, violets are blue, my love for you is forever true." },
     { src: "images/A3.jpg", message: "Every moment with you is a treasure, Happy Valentine's Day!" },
     { src: "images/A4.jpg", message: "You are my sunshine on a cloudy day, Happy Valentine's Day!" },
