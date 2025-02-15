@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belated Gift Baby!</title>
+    <link rel="stylesheet" href="Essential/styles.css">
+    <style>
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #play-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="carousel">
+            <div class="image-box">
+                <img src="images/A1.jpg" alt="A1" class="active">
+            </div>
+        </div>
+        <div class="message-box">Test Message</div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="Essential/music/1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="overlay">
+        <button id="play-button">Start</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('background-music');
+            var overlay = document.getElementById('overlay');
+            var playButton = document.getElementById('play-button');
+            
+            playButton.addEventListener('click', function() {
+                audio.play().catch(function(error) {
+                    console.log('Audio playback failed:', error);
+                });
+                overlay.style.display = 'none';
+            });
+        });
+    </script>
+    <script src="Essential/script.js"></script>
+</body>
+</html>
